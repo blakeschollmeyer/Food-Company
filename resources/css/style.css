@@ -22,6 +22,16 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+/* clearing the floats of meals-showcase*/
+.clearfix {zoom:1}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
 /* -------------------------------------------------------------------------------------------------------------------*/
 /* REUSABLE COMPONENTS */
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -54,6 +64,19 @@ section {
     display: block;
     color: #e67e22;
     margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    /* align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -100,6 +123,26 @@ h2:after {
     /* entire browser length */
     width: 100px;
     margin: 30px auto;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+/* LINKS */
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+.city-feature a:link,
+.city-feature a:active {
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+}
+
+.city-feature a:hover,
+.city-feature a:active {
+    color: #555;
+    /* when hover, border disappears */
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s, color 0.2s;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------*/
@@ -170,6 +213,7 @@ h2:after {
 header {
     /* uses a 70%, 70% darker gradient to place on top of the image */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/hero.jpg");
+    background-attachment: fixed;
     /* the following two properties cover the screen with and center the image */
     background-size: cover;
     background-position: center;
@@ -275,25 +319,124 @@ header {
 /* HOW IT WORKS */
 /* -------------------------------------------------------------------------------------------------------------------*/
 
-.section-steps {
-
+.right {
+    text-align: right;
 }
 
-.steps-box {
-    margin-top: 30px;
+.top {
+    margin-top: 60px;
+}
+
+.section-steps {
+    background-color: #f4f4f4;
 }
 
 /* selects the first of the step boxes */
 .steps-box:first-child {
     text-align: right;
     padding-right: 3%;
+    margin-top: 30px;
 }
 
 .steps-box:last-child {
     padding-left: 3%;
+    margin-top: 70px;
 }
 
 .app-screen {
     width: 40%;
+}
 
+.works-step {
+    margin-bottom: 50px;
+}
+
+/* last of similar siblings */
+.works-step:last-of-type {
+    margin-bottom: 80px;
+
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-left: 35px;
+    margin-right: 25px;
+}
+
+.app-store {
+    margin-left: 35px;
+}
+
+.btn-app img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+/* CITIES */
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+/* TESTIMONIALS */
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/back-customers.jpg");
+    background-size: cover;
+    color:#fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2px;
+    /* make sure to include google italic font */
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    /* new line for opening quote */
+    display: block;
+    /* parent needs to be relative since child is absolute */
+    position: absolute;
+       /* readjusting the quotation */
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    /* line up image and customer name */
+    display: block;
+}
+
+cite img {
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
