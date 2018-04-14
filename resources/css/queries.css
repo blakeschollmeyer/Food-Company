@@ -1,0 +1,20 @@
+/* Bit tablets to 1200px: 1024px to 1200px */
+/* Website max width is 1140px row with some margin */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Small tablets to big tablets: 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+
+}
+
+/* Small phones to small tablets: 481px to 767px */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Small phones: 0 to 480px */
+@media only screen and (max-width: 480px) {
+
+}

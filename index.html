@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Responsive design -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS reference -->
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+        <!-- Google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+        <!-- Text for UTF-8 languages -->
         <meta charset="UTF-8">
+
         <title>Title</title>
     </head>
     <body>
@@ -37,7 +44,6 @@
                     Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
                 </p>
             </div>
-
             <div class="row">
                 <div class="col span-1-of-4 box">
                     <i class="ion-ios-infinite-outline icon-big"></i>
@@ -59,14 +65,14 @@
                     <p>
                         All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!
                     </p>
-                </div><div class="col span-1-of-4 box">
+                </div>
+                <div class="col span-1-of-4 box">
                 <i class="ion-ios-cart-outline icon-big"></i>
                 <h3>Order anything</h3>
                 <p>
                     We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!
                 </p>
-            </div>
-
+                </div>
             </div>
         </section>
 
@@ -150,7 +156,6 @@
             <div class="row">
                 <h2>We're currently in these cities</h2>
             </div>
-
             <div class="row">
                 <div class="col span-1-of-4 box">
                     <img src="resources/css/img/lisbon-3.jpg" alt="Lisbon">
@@ -248,15 +253,182 @@
             </div>
         </section>
 
+        <section class="section-plans">
+            <div>
+                <h2>Start eating healthy today</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Premium</h3>
+                            <!-- Just using span to add some extra properties to part of the text -->
+                            <p class="plan-price">$399 <span>/ meal</span></p>
+                            <p class="plan-price-meal"><span class="plan-description">That’s only 13.30$ per meal</span></p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal every day</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-full">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Pro</h3>
+                            <p class="plan-price">149$ <span>/ meal</span></p>
+                            <p class="plan-price-meal">That’s only 14.90$ per meal</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal 10 days/month</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order 24/7</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Access to newest creations</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="plan-box">
+                        <div>
+                            <h3>Starter</h3>
+                            <p class="plan-price">19$ <span>/ meal</span></p>
+                            <!-- needed special html new line character from lack of Starter pack description -->
+                            <p class="plan-price-meal">&nbsp;</p>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>1 meal</li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Order from 8 am to 12 pm</li>
+                                <li><i class="ion-ios-close-empty icon-small"></i></li>
+                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Free delivery</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-ghost">Sign up now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-form">
+            <div class="row">
+                <h2>We're happy to hear from you</h2>
+            </div>
+            <div class="row">
+                <form method="post" action="#" class="contact-form">
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <!-- can use the id: name so that the user can click this label and type -->
+                            <label for="name">Name</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <!-- "required" forces user to complete form -->
+                            <input type="text" name="name" id="name" placeholder="Your name" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <label for="email">Email</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <!-- "required" forces user to complete form -->
+                            <input type="email" name="email" id="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <label for="find-us">How did you find us?</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <!-- "required" forces user to complete form -->
+                            <select name="find-us" id="find-us">
+                                <!-- Friends will be "selected" -->
+                                <option value="friends" selected>Friends</option>
+                                <option value="">Search Engine</option>
+                                <option value="friends">Advertisement</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <label>Newsletter</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <input type="checkbox" name="" id="" checked> Yes, please
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <label>Drop us a line</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <textarea name="message" placeholder="Your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- 1-of-3 - width: 32.25% -->
+                        <div class="col span-1-of-3">
+                            <label>&nbsp;</label>
+                        </div>
+                        <!-- 2-of-3 - width: 66.13% -->
+                        <div class="col span-2-of-3">
+                            <input type="submit" value="Send it">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="row">
+                <div class="col span-1-of-2">
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                </div>
+                <div class="col span-1-of-2">
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="#"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p>
+                    Copyright &copy; 2015 by Omnifood. All rights reserved.
+                </p>
+            </div>
+        </footer>
+
     </body>
 </html>
-
-
-<!--
-
-
-
-
-
-
--->
