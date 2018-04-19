@@ -10,16 +10,20 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     background-color: #fff;
     color: #555;
     font-family: Lato, Arial, sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    /* hides extra x that we don't want */
+    overflow-x: hidden;
 }
 
 /* clearing the floats of meals-showcase*/
@@ -142,6 +146,7 @@ h2:after {
     color: #555;
     /* when hover, border disappears */
     border-bottom: 1px solid transparent;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -195,6 +200,7 @@ input[type=submit] {
 input[type=submit]:hover,
 input[type=submit]:active {
     background-color: #cf6d17;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -216,6 +222,7 @@ input[type=submit]:active {
 
 header {
     /* uses a 70%, 70% darker gradient to place on top of the image */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("img/hero.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/hero.jpg");
     background-attachment: fixed;
     /* the following two properties cover the screen with and center the image */
@@ -233,6 +240,7 @@ header {
     top: 50%;
     left: 50%;
     /* translates half of element's width and height up and to the left */
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -262,6 +270,7 @@ header {
     /* 90% of body gives 18px */
     font-size: 90%;
     border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
     transition: border-bottom 0.2s;
 }
 
@@ -309,13 +318,16 @@ header {
     width: 100%;
     height: auto;
     /* increases image size to account for white space that was created */
+    -webkit-transform: scale(1.15);
     transform: scale(1.15);
 }
 
 .meal-photo img:hover {
     opacity: 1;
     /* image scales back to around original size when hover over */
+    -webkit-transform: scale(1.03);
     transform: scale(1.03);
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -353,6 +365,10 @@ header {
 
 .works-step {
     margin-bottom: 50px;
+}
+
+.works-img:first-child {
+    text-align: right;
 }
 
 /* last of similar siblings */
@@ -404,6 +420,7 @@ header {
 /* -------------------------------------------------------------------------------------------------------------------*/
 
 .section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("img/back-customers.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/back-customers.jpg");
     background-size: cover;
     color:#fff;
@@ -462,6 +479,7 @@ cite img {
     margin-left: 5%;
     /* 1st: x-axis, 2nd: y-axis, 3rd: blur, 4th: color */
     /*box-shadow: 0 2px 2px #efefef;*/
+    -webkit-box-shadow: 10px 20px 30px #000000;
     box-shadow: 10px 20px 30px #000000;
 }
 
@@ -592,6 +610,7 @@ footer p {
 .footer-nav li a:hover,
 .footer-nav li a:active {
     color: #ddd;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -604,6 +623,7 @@ footer p {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
